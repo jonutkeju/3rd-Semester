@@ -1,5 +1,6 @@
 # 3rd Semester Projects
-Yeah, as the title suggest- this is where i save all Uni Projects. Here's a little guide for you:
+Yeah, as the title suggest- this is where i save all Uni Projects...
+A Little disclaimer, though- they are mostly Indonesian.
 
 ## Course Guide
 | Code | Course |
@@ -12,9 +13,9 @@ Yeah, as the title suggest- this is where i save all Uni Projects. Here's a litt
 | `WP` | Web Programming |
 
 ## Type Guide
-| Code | Type |
-|---|---|
-| `T` | Task |
-| `C` | Challenge |
-| `M` | Module |
-| `P` | Precourse |
+| Code | Type | Description |
+|---|---|---|
+| `T` | Task | Project Tasked by Lecturer |
+| `C` | Challenge | Challenge from Lab Sessions |
+| `M` | Module | Score-Oriented Modules of Practicum |
+| `P` | Precourse | Mostly Setups, Pre-Tests, etc |
