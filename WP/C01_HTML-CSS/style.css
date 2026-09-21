@@ -1,0 +1,39 @@
+body {
+        background-color: #9f5500;
+        font-family: Arial, sans-serif;
+    }
+
+    .leg ul {
+        list-style-type: none;
+        padding: 10px;
+    }
+
+    .leg li {
+        display: inline;
+        margin-right: 15px;
+    }
+
+    .leg a {
+        text-decoration: none;
+        color: #ffd57b;
+    }
+
+    .box {
+        background-color: #ffd57b;
+        padding: 20px;
+        margin-top: 20px;
+        border-radius: 10px;
+        color: #9f5500;
+    }
+
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        color: #9f5500;
+    }
+
+    th,
+    td {
+        padding: 10px;
+        text-align: center;
+    }

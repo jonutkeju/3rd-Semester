@@ -1,0 +1,5 @@
+
+; <<>> DiG 9.20.27-2-Debian <<>> axfr @192.168.56.103 metasploitable.local
+; (1 server found)
+;; global options: +cmd
+; Transfer failed.
