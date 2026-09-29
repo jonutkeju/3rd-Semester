@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Asthmazon - Katalog Produk</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style2.css?v=15" />
+</head>
+<body>
+  <header class="navbar">
+    <div class="navbar__brand">
+      <a href="Catalogpage.html?v=15" class="navbar__logo">Asthmazon</a>
+    </div>
+
+    <div class="navbar__search">
+      <input type="text" id="searchInput" class="search-input" placeholder="Cari produk atau kategori..." autocomplete="off" />
+    </div>
+
+    <div class="navbar__actions">
+      <button type="button" id="cartButton" class="cart-button" aria-label="Buka keranjang belanja" aria-expanded="false" aria-controls="cartModal">
+        <span class="cart-icon" aria-hidden="true">🛒</span>
+        <span id="cartBadge" class="cart-badge">0</span>
+      </button>
+      <span id="welcomeMessage" class="navbar__welcome">Halo, <strong id="userFirstName">Guest</strong></span>
+      <button type="button" id="logoutButton" class="btn btn--logout">Keluar</button>
+    </div>
+  </header>
+
+  <section class="toolbar">
+    <div class="toolbar__filters">
+      <div class="toolbar__field">
+        <label for="categoryFilter" class="toolbar__label">Kategori</label>
+        <select id="categoryFilter" class="select-input">
+          <option value="all">Semua kategori</option>
+        </select>
+      </div>
+
+      <div class="toolbar__field">
+        <label for="sortSelect" class="toolbar__label">Urutkan</label>
+        <select id="sortSelect" class="select-input">
+          <option value="default">Default</option>
+          <option value="price-asc">Harga: Termurah</option>
+          <option value="price-desc">Harga: Termahal</option>
+          <option value="rating-desc">Rating: Tertinggi</option>
+          <option value="rating-asc">Rating: Terendah</option>
+        </select>
+      </div>
+    </div>
+
+    <p class="toolbar__count" id="resultCount">Memuat produk...</p>
+  </section>
+
+  <main class="main-content">
+    <div id="loadingState" class="state-message state-message--loading" hidden>
+      <p>Memuat produk, mohon tunggu...</p>
+    </div>
+
+    <div id="errorState" class="state-message state-message--error" hidden>
+      <p id="errorMessage">Gagal memuat produk. Silakan coba lagi.</p>
+      <button type="button" id="retryButton" class="btn btn--primary">Coba Lagi</button>
+    </div>
+
+    <div id="emptyState" class="state-message state-message--empty" hidden>
+      <p>Produk tidak ditemukan.</p>
+    </div>
+
+    <div id="productGrid" class="product-grid" aria-live="polite"></div>
+
+    <div class="load-more-wrapper">
+      <button type="button" id="loadMoreButton" class="btn btn--secondary" hidden>Muat lebih banyak</button>
+    </div>
+  </main>
+
+  <div id="cartModal" class="modal cart-modal" hidden aria-hidden="true">
+    <div class="modal__overlay" id="cartOverlay"></div>
+    <section class="cart-panel" role="dialog" aria-modal="true" aria-labelledby="cartTitle">
+      <header class="cart-panel__header">
+        <h2 id="cartTitle">Keranjang Belanja</h2>
+        <button type="button" id="cartCloseButton" class="modal__close" aria-label="Tutup keranjang">&times;</button>
+      </header>
+      <div id="cartItems" class="cart-items" aria-live="polite"></div>
+      <footer class="cart-panel__footer">
+        <div class="cart-total"><span>Total</span><strong id="cartTotal">$0</strong></div>
+        <button type="button" id="clearCartButton" class="btn btn--secondary">Kosongkan Keranjang</button>
+      </footer>
+    </section>
+  </div>
+
+  <div id="productModal" class="modal" hidden aria-hidden="true">
+    <div class="modal__overlay" id="modalOverlay"></div>
+    <div class="modal__content" role="dialog" aria-modal="true" aria-labelledby="modalProductName">
+      <button type="button" id="modalCloseButton" class="modal__close" aria-label="Tutup">&times;</button>
+      <div class="modal__body">
+        <img id="modalProductImage" class="modal__image" src="" alt="" />
+        <div class="modal__details">
+          <p id="modalProductCategory" class="modal__category"></p>
+          <h2 id="modalProductName" class="modal__name"></h2>
+          <p class="modal__brand">Brand: <span id="modalProductBrand"></span></p>
+          <div class="modal__meta">
+            <span id="modalProductPrice" class="modal__price"></span>
+            <span id="modalProductRating" class="modal__rating"></span>
+          </div>
+          <p class="modal__stock">Stok tersedia: <span id="modalProductStock"></span></p>
+          <p id="modalProductDescription" class="modal__description"></p>
+          <button type="button" id="modalAddCartButton" class="btn btn--primary" data-id="">Tambah ke Keranjang</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js?v=9" defer></script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="id">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="description" content="Kalkulator sederhana untuk dua angka.">
+		<title>Kalkulator Dua Angka</title>
+		<link rel="stylesheet" href="style.css">
+		<script src="script.js" defer></script>
+	</head>
+	<body>
+		<main class="page">
+			<div class="calculator-content">
+				<h1>Kalkulator</h1>
+				<form id="calculator-form" aria-label="Kalkulator dua angka">
+					<div class="input-row">
+						<input id="first-number" type="number" step="any" placeholder="Input 1" aria-label="Input 1">
+						<select id="operator" name="operator" aria-label="Operasi matematika">
+							<option value="+">+</option>
+							<option value="*">x</option>
+							<option value="/">:</option>
+							<option value="-">-</option>
+						</select>
+						<input id="second-number" type="number" step="any" placeholder="Input 2" aria-label="Input 2">
+					</div>
+					<div class="action-row">
+						<button type="submit">Hitung</button>
+						<p id="result" class="result" role="status" aria-live="polite">Hasil akan tampil disini</p>
+					</div>
+				</form>
+			</div>
+			<footer>5027251036 | Jonathan Steven Tjahjaputra</footer>
+		</main>
+	</body>
+</html>
