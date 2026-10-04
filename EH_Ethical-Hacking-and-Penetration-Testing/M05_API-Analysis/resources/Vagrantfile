@@ -1,0 +1,20 @@
+# Vagrantfile - Bab 5: Kali Attacker untuk Web Reconnaissance
+#
+# Cara pakai:
+#   vagrant up
+#   vagrant ssh
+
+Vagrant.configure("2") do |config|
+  config.vm.box = "kalilinux/rolling"
+  config.vm.hostname = "kali-attacker-bab5"
+
+  config.vm.network "private_network", ip: "192.168.56.15"
+
+  config.vm.provider "virtualbox" do |vb|
+    vb.name = "Bab05-Kali-WebRecon"
+    vb.memory = "4096"
+    vb.cpus = 2
+  end
+
+  config.vm.provision "shell", path: "provision.sh"
+end
